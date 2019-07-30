@@ -47,14 +47,15 @@ spec:
     name: istio
     version: 1.1.0
   values:
-    global:
-      enableTracing: false
-    tracing:
-      enabled: false
-    pilot:
-      traceSampling: 100
     prometheus:
       enabled: false
+
+    mixer:
+      telemetry:
+        resources:
+          requests:
+            cpu: 100m
+            memory: 500m
 ```
 
 Currently, this [chart](https://github.com/istio/istio/tree/master/install/kubernetes/helm/istio) is being used for Istio deployment.
