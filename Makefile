@@ -7,6 +7,7 @@ install:
 	kubectl apply -f namespace.yaml
 	kubectl apply -f istio-init.yaml
 	kubectl apply -f .
+
 install-dry-run: 
 	cd $(FOLDER_NAME)
 	kubectl apply -f namespace.yaml --dry-run
